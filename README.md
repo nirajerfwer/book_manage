@@ -140,7 +140,7 @@ This project uses **3 collections** in the `book_db` database:
 ## 📮 PostMan API
 
 - Find billeasy.postman_collection.json 
-- all the apis that are using in project showen there
+- all the apis that are using in project shown there
 
 
 
