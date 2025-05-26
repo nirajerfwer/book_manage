@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "2c5d8660-88e0-4636-a231-880db7ab7488",
+		"name": "billeasy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42353977"
+	},
+	"item": [
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "createBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "rich dad poor dad",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Robert T. Kiyosaki",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "01/04/199",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get whole book",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnbWFpbCI6InRlc3QyM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBkZiM0M2ZkZiIsImlhdCI6MTc0ODI2MjE5OCwiZXhwIjoxNzQ4MjY1Nzk4fQ.T5_bEVi9wdycTMNrTKK-kYPaUoRKopp9KQzDVhFtz_o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "rich dad poor dad",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Robert T. Kiyosaki",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "01/04/199",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/books?page=0&limit=10&author=rakesh&genre=comic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "author",
+									"value": "rakesh"
+								},
+								{
+									"key": "genre",
+									"value": "comic"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "rich dad poor dad",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Robert T. Kiyosaki",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "01/04/199",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/books/683419b66784b34a4143a4b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"683419b66784b34a4143a4b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "neeraj",
+									"type": "text"
+								},
+								{
+									"key": "gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/6833f9bd50154cd881913ea1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"6833f9bd50154cd881913ea1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get whole user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "neeraj",
+									"type": "text"
+								},
+								{
+									"key": "Gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test5",
+									"type": "text"
+								},
+								{
+									"key": "gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "neeraj",
+									"type": "text"
+								},
+								{
+									"key": "Gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "jenny",
+									"type": "text"
+								},
+								{
+									"key": "Gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/682f879bbf09badc94f471fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"682f879bbf09badc94f471fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteuser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "jenny",
+									"type": "text"
+								},
+								{
+									"key": "Gmail",
+									"value": "nirajv212@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Phone",
+									"value": "53958698348",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "pdf#43fdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/682f879bbf09badc94f471fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"682f879bbf09badc94f471fc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "add reviews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rating",
+									"value": "4/5",
+									"type": "text"
+								},
+								{
+									"key": "rating_Message",
+									"value": "If you need control over your money and wanted to better your fanacial condition, i will recomand this book , realy help full thanks to the Author for wonderfull book",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "6834138b7175cc5bb0f8770b",
+									"type": "text"
+								},
+								{
+									"key": "bookId",
+									"value": "683419b66784b34a4143a4b1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/books/683419b66784b34a4143a4b1/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"683419b66784b34a4143a4b1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update review",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnbWFpbCI6InRlc3QyM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBkZiM0M2ZkZiIsImlhdCI6MTc0ODI2MjE5OCwiZXhwIjoxNzQ4MjY1Nzk4fQ.T5_bEVi9wdycTMNrTKK-kYPaUoRKopp9KQzDVhFtz_o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rating",
+									"value": "4/5",
+									"type": "text"
+								},
+								{
+									"key": "rating_Message",
+									"value": "If you need control over your money and wanted to better your fanacial condition, i will recomand this book , realy help full thanks to the Author for wonderfull books",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "6834138b7175cc5bb0f8770b",
+									"type": "text"
+								},
+								{
+									"key": "bookId",
+									"value": "683419b66784b34a4143a4b1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/683422c12e3e01de8a845667",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"683422c12e3e01de8a845667"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete reviews",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnbWFpbCI6InRlc3QyM0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InBkZiM0M2ZkZiIsImlhdCI6MTc0ODI2MjE5OCwiZXhwIjoxNzQ4MjY1Nzk4fQ.T5_bEVi9wdycTMNrTKK-kYPaUoRKopp9KQzDVhFtz_o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rating",
+									"value": "4/5",
+									"type": "text"
+								},
+								{
+									"key": "rating_Message",
+									"value": "If you need control over your money and wanted to better your fanacial condition, i will recomand this book , realy help full thanks to the Author for wonderfull books",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "6834138b7175cc5bb0f8770b",
+									"type": "text"
+								},
+								{
+									"key": "bookId",
+									"value": "683419b66784b34a4143a4b1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/6834225aa7b8367bc0c8363b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"6834225aa7b8367bc0c8363b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test5",
+							"type": "text"
+						},
+						{
+							"key": "gmail",
+							"value": "nirajv212@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "53958698348",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pdf#43fdf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000?search=rich",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"query": [
+						{
+							"key": "search",
+							"value": "rich"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
