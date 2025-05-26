@@ -1,0 +1,59 @@
+1. tech stack - 
+.. usin .. MongoDB.. here..
+(
+have to revise first how to creat mongoDBs.. 
+how to create map in mind to coordinate properly
+just have to look in 
+first have to create scemas for that .. 
+user table
+
+name:string
+gmail:string
+phone:number
+password:string
+
+user table
+
+name:string
+gmail:string
+phone:number
+password:string
+
+login..
+
+gmail:string
+password:string .. should also include crypt .. hashing
+
+book..
+
+id
+name..
+author..
+published_date..
+
+
+.. ak book has multiple review.. . one to many..(relation ship)
+.. ak user ak book pe ak hi review kar sakta hai ..
+
+review..
+
+UserId ( Foriegn Key of User Table)
+BookId
+rating.. 
+Message..
+
+.... core thigs .. 
+get all books .. with optional firlter by author and genre..
+get book details by .. average rating .and review.. with filter of pagination ..
+reviews only for authorized user.. 
+
+.... to do in mongodb.. 
+going to mongoose there..
+
+create model of table..
+handlers..
+routers..
+middleware..
+db.. models..
+
+note:- 
